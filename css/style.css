@@ -1,0 +1,617 @@
+/*=== GLOBALS ===============================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 1rem 'Bai Jamjuree', sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*=== GLOBAL STYLES ===============================*/
+h2 {
+  font: var(--Title);
+}
+
+p {
+  color: var(--Grayish-blue);
+  line-height: 1.57;
+  font-size: 1.07rem;
+}
+
+/*=== VARIABLES ===============================*/
+:root {
+  /* Primary */
+  --Button-ios-shadow: hsl(171, 66%, 60%);
+  --Strong-cyan: hsl(171, 66%, 42%);
+  --Light-blue: hsl(233, 100%, 69%);
+  --Footer-background: hsl(201, 11%, 97%);
+  --Footer-hover: hsl(171, 68%, 48%);
+
+  /* Neutral */
+  --Dark-grayish-blue: hsl(210, 10%, 33%);
+  --Grayish-blue: hsl(201, 11%, 66%);
+
+  /* fonts */
+  --Main-title: 600 2.1rem 'Bai Jamjuree', sans-serif;
+  --Title: 600 1.8rem 'Bai Jamjuree', sans-serif;
+  --Title-details-cards: 1.6rem;
+  --Title-workflow-cards: 1.5rem;
+}
+
+/*=== REUSABLE CLASSES =========================*/
+.title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--Dark-grayish-blue);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.buttons a {
+  padding: 0.9rem 4.4rem;
+  color: hsl(0, 0%, 85%);
+  border-radius: 30px;
+  border-bottom: 3px solid hsla(0, 0%, 25%, 20%);
+  font-weight: 600;
+  transition: 400ms;
+}
+
+.buttons a:hover {
+  opacity: 0.72;
+}
+
+.buttons .button--ios {
+  background: var(--Strong-cyan);
+  box-shadow: 0px 10px 27px -12px var(--Button-ios-shadow);
+}
+
+.buttons .button--mac {
+  background: var(--Light-blue);
+}
+
+/*=== LAYOUT =========================*/
+.wrapper {
+  margin: 0 1.375rem;
+}
+
+/*=== STYLES =========================*/
+#header {
+  padding-top: 5.875rem;
+  margin-bottom: 10rem;
+  background-image: url('../assets/images/bg-header-mobile.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#header .header__content {
+  margin: 0 1.375rem;
+  display: grid;
+  place-content: center;
+}
+
+#header .header__logo img {
+  width: 6.25rem;
+  margin-bottom: 3.25rem;
+}
+
+#header .header__text h1 {
+  font: var(--Main-title);
+}
+
+#header .header__text p {
+  margin-bottom: 2.188rem;
+}
+
+#details {
+  padding-bottom: 13rem;
+}
+
+#details .details__text {
+  margin-bottom: 4.375rem;
+}
+
+#details .details__image img {
+  margin-bottom: 4rem;
+}
+
+#details .details__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.86rem;
+}
+
+#details h3 {
+  font-size: var(--Title-details-cards);
+}
+
+#more {
+  padding-bottom: 6.563rem;
+}
+
+#more .more__text {
+  margin-bottom: 3.313rem;
+}
+
+#workflow {
+  padding-bottom: 8rem;
+}
+
+#workflow .workflow__text {
+  margin-bottom: 4.5rem;
+}
+
+#workflow .workflow__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.3rem;
+}
+
+#workflow img {
+  width: 2.3rem;
+  margin-bottom: 2.063rem;
+}
+
+#workflow h3 {
+  font-size: var(--Title-workflow-cards);
+}
+
+#brands-logos {
+  padding-bottom: 11rem;
+}
+
+#brands-logos .brands-logos__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+#brands-logos img {
+  width: 7.3rem;
+  transition: transform 250ms ease-in;
+}
+
+#brands-logos img:hover {
+  transform: scale(0.9);
+}
+
+#clipboard {
+  padding-bottom: 8.125rem;
+}
+
+#clipboard .clipboard__text {
+  margin-bottom: 2.375rem;
+}
+
+#clipboard .clipboard__text p {
+  font-size: 1.08rem;
+}
+
+#footer {
+  background: var(--Footer-background);
+  padding: 2.375rem 5.313rem;
+}
+
+#footer .footer__logo img {
+  width: 2.813rem;
+  margin-bottom: 2.125rem;
+}
+
+#footer .footer__help ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.563rem;
+}
+
+#footer .footer__help {
+  margin-bottom: 2.5rem;
+}
+
+#footer .footer__help ul li a {
+  color: var(--Dark-grayish-blue);
+  transition: color 500ms;
+}
+
+#footer .footer__help ul li a:hover {
+  color: var(--Footer-hover);
+}
+
+#footer .footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: 2.1rem;
+}
+
+#footer .footer__socials a i {
+  transition: color 500ms;
+  font-size: 1.5rem;
+  color: var(--Dark-grayish-blue);
+}
+
+#footer .footer__socials a i:hover {
+  color: var(--Strong-cyan);
+}
+
+/*=== RESPONSIVE =========================*/
+@media screen and (min-width: 62rem) {
+  /* global styles*/
+  p {
+    font-size: 1.14rem;
+  }
+
+  /* variables */
+  :root {
+    --Main-title: 600 2.7rem 'Bai Jamjuree', sans-serif;
+    --Title: 600 2.3rem 'Bai Jamjuree', sans-serif;
+  }
+
+  /* reusable classes */
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .buttons a {
+    padding: 0.9rem 2.2rem;
+  }
+
+  /* layout */
+  .wrapper {
+    max-width: 62.5rem;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  /* styles */
+  #header {
+    padding-top: 8rem;
+    background-image: url('../assets/images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  #header .header__logo img {
+    width: 7.875rem;
+    margin-bottom: 4.063rem;
+  }
+
+  #header .header__text {
+    width: 42rem;
+  }
+
+  #header .header__text p {
+    margin-bottom: 3.25rem;
+  }
+
+  #details .wrapper {
+    max-width: 45rem;
+  }
+
+  #details .details__text {
+    margin-bottom: 5.188rem;
+  }
+
+  #details .details__container {
+    display: flex;
+    align-items: center;
+    gap: 6.5rem;
+    overflow: hidden;
+    text-align: left;
+    max-width: 78rem;
+  }
+
+  #details .details__image img {
+    margin: 0;
+    position: relative;
+    left: -2rem;
+  }
+
+  #details .details__cards {
+    flex: 1;
+  }
+
+  #more .wrapper {
+    display: grid;
+    place-content: center;
+  }
+
+  #more .more__text {
+    width: 45rem;
+    margin: 0 auto 7.25rem;
+  }
+
+  #workflow {
+    padding-bottom: 10.375rem;
+  }
+
+  #workflow .workflow__text {
+    margin-bottom: 5rem;
+  }
+
+  #workflow .workflow__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.438rem;
+  }
+
+  #workflow .workflow__cards img {
+    width: 3rem;
+  }
+
+  #workflow .workflow__cards p {
+    font-size: 1.07rem;
+  }
+
+  #brands-logos .brands-logos__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 6rem;
+  }
+
+  #brands-logos img {
+    width: 10rem;
+  }
+
+  #clipboard {
+    padding-bottom: 9.313rem;
+  }
+
+  #clipboard .clipboard__text {
+    margin-bottom: 3.313rem;
+  }
+
+  #clipboard .clipboard__text p {
+    width: 41rem;
+    margin: 0 auto;
+  }
+
+  #footer {
+    padding: 2.375rem 10rem;
+    text-align: left;
+  }
+
+  #footer .footer__logo img {
+    margin: 0;
+    width: 3.5rem;
+  }
+
+  #footer .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #footer .footer__help {
+    margin: 0;
+  }
+
+  #footer .footer__help ul {
+    display: grid;
+    grid-template-columns: [start] 1fr [middle-1] 1fr [middle-2] 1fr [end];
+    row-gap: 1rem;
+    column-gap: 5.75rem;
+  }
+
+  #footer .footer__help ul li:nth-child(3) {
+    grid-area: 1 / middle-1 / middle-2;
+  }
+
+  #footer .footer__help ul li:last-child {
+    grid-area: 1 / middle-2 / end;
+  }
+
+  #footer .footer__help ul li a {
+    font-size: 1.1rem;
+  }
+
+  #footer .footer__socials {
+    gap: 1.36rem;
+  }
+
+  #footer .footer__socials a i {
+    font-size: 1.563rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  /* global styles*/
+  p {
+    font-size: 1.14rem;
+  }
+
+  /* variables */
+  :root {
+    --Main-title: 600 2.7rem 'Bai Jamjuree', sans-serif;
+    --Title: 600 2.3rem 'Bai Jamjuree', sans-serif;
+  }
+
+  /* reusable classes */
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .buttons a {
+    padding: 0.9rem 2.2rem;
+  }
+
+  /* layout */
+  .wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+  /* styles */
+  #header {
+    padding-top: 8rem;
+    background-image: url('../assets/images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  #header .header__logo img {
+    width: 7.875rem;
+    margin-bottom: 4.063rem;
+  }
+
+  #header .header__text {
+    width: 42rem;
+  }
+
+  #header .header__text p {
+    margin-bottom: 3.25rem;
+  }
+
+  #details .wrapper {
+    max-width: 45rem;
+  }
+
+  #details .details__text {
+    margin-bottom: 5.188rem;
+  }
+
+  #details .details__container {
+    display: flex;
+    align-items: center;
+    gap: 6.5rem;
+    overflow: hidden;
+    text-align: left;
+    max-width: 78rem;
+  }
+
+  #details .details__image img {
+    margin: 0;
+    position: relative;
+    left: -2rem;
+  }
+
+  #details .details__cards {
+    flex: 1;
+  }
+
+  #more .wrapper {
+    display: grid;
+    place-content: center;
+  }
+
+  #more .more__text {
+    width: 45rem;
+    margin: 0 auto 7.25rem;
+  }
+
+  #workflow {
+    padding-bottom: 10.375rem;
+  }
+
+  #workflow .workflow__text {
+    margin-bottom: 5rem;
+  }
+
+  #workflow .workflow__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.438rem;
+  }
+
+  #workflow .workflow__cards img {
+    width: 3rem;
+  }
+
+  #workflow .workflow__cards p {
+    font-size: 1.07rem;
+  }
+
+  #brands-logos .brands-logos__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 6rem;
+  }
+
+  #brands-logos img {
+    width: 10rem;
+  }
+
+  #clipboard {
+    padding-bottom: 9.313rem;
+  }
+
+  #clipboard .clipboard__text {
+    margin-bottom: 3.313rem;
+  }
+
+  #clipboard .clipboard__text p {
+    width: 41rem;
+    margin: 0 auto;
+  }
+
+  #footer {
+    padding: 2.375rem 10rem;
+    text-align: left;
+  }
+
+  #footer .footer__logo img {
+    margin: 0;
+    width: 3.5rem;
+  }
+
+  #footer .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #footer .footer__help {
+    margin: 0;
+  }
+
+  #footer .footer__help ul {
+    display: grid;
+    grid-template-columns: [start] 1fr [middle-1] 1fr [middle-2] 1fr [end];
+    row-gap: 1rem;
+    column-gap: 5.75rem;
+  }
+
+  #footer .footer__help ul li:nth-child(3) {
+    grid-area: 1 / middle-1 / middle-2;
+  }
+
+  #footer .footer__help ul li:last-child {
+    grid-area: 1 / middle-2 / end;
+  }
+
+  #footer .footer__help ul li a {
+    font-size: 1.1rem;
+  }
+
+  #footer .footer__socials {
+    gap: 1.36rem;
+  }
+
+  #footer .footer__socials a i {
+    font-size: 1.563rem;
+  }
+}

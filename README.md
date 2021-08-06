@@ -22,13 +22,13 @@ Users should be able to:
 
 ### Desktop
 
-![](../app/README-files/page-preview.gif)
+![](https://github.com/LeonardoYz/clipboard-landing-page/blob/main/README-files/page-preview.gif)
 
 <br>
 
 ### Mobile
 
-![](../app/README-files/page-preview-mobile.gif)
+![](https://github.com/LeonardoYz/clipboard-landing-page/blob/main/README-files/page-preview-mobile.gif)
 
 ## Links
 
@@ -55,8 +55,7 @@ Users should be able to:
 ## What I learned
 
 <br>
-
-#### New hover effects
+<li>New hover effects</li>
 
 #
 

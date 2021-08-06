@@ -132,6 +132,10 @@ p {
   margin-bottom: 4.375rem;
 }
 
+#details .details__container {
+  margin: 0 1.375rem;
+}
+
 #details .details__image img {
   margin-bottom: 4rem;
 }
@@ -255,7 +259,15 @@ p {
 }
 
 /*=== RESPONSIVE =========================*/
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 36rem) {
+  #header {
+    background-image: url('../assets/images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+@media screen and (min-width: 48rem) {
   /* global styles*/
   p {
     font-size: 1.14rem;
@@ -277,19 +289,13 @@ p {
     padding: 0.9rem 2.2rem;
   }
 
-  /* layout */
   .wrapper {
-    max-width: 62.5rem;
-    overflow: hidden;
-    margin: 0 auto;
+    margin: 0 1.5rem;
   }
 
   /* styles */
   #header {
     padding-top: 8rem;
-    background-image: url('../assets/images/bg-header-desktop.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
   }
 
   #header .header__logo img {
@@ -305,74 +311,27 @@ p {
     margin-bottom: 3.25rem;
   }
 
-  #details .wrapper {
-    max-width: 45rem;
-  }
-
   #details .details__text {
     margin-bottom: 5.188rem;
   }
 
-  #details .details__container {
-    display: flex;
-    align-items: center;
-    gap: 6.5rem;
-    overflow: hidden;
-    text-align: left;
-    max-width: 78rem;
-  }
-
   #details .details__image img {
-    margin: 0;
-    position: relative;
-    left: -2rem;
-  }
-
-  #details .details__cards {
-    flex: 1;
-  }
-
-  #more .wrapper {
-    display: grid;
-    place-content: center;
-  }
-
-  #more .more__text {
-    width: 45rem;
-    margin: 0 auto 7.25rem;
-  }
-
-  #workflow {
-    padding-bottom: 10.375rem;
+    margin-bottom: 6rem;
   }
 
   #workflow .workflow__text {
     margin-bottom: 5rem;
   }
 
-  #workflow .workflow__cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2.438rem;
-  }
-
-  #workflow .workflow__cards img {
-    width: 3rem;
-  }
-
-  #workflow .workflow__cards p {
-    font-size: 1.07rem;
-  }
-
   #brands-logos .brands-logos__container {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 6rem;
+    gap: 2.3rem;
   }
 
   #brands-logos img {
-    width: 10rem;
+    width: 7rem;
   }
 
   #clipboard {
@@ -389,7 +348,7 @@ p {
   }
 
   #footer {
-    padding: 2.375rem 10rem;
+    padding: 2.375rem 2rem;
     text-align: left;
   }
 
@@ -412,7 +371,7 @@ p {
     display: grid;
     grid-template-columns: [start] 1fr [middle-1] 1fr [middle-2] 1fr [end];
     row-gap: 1rem;
-    column-gap: 5.75rem;
+    column-gap: 3.4rem;
   }
 
   #footer .footer__help ul li:nth-child(3) {
@@ -436,70 +395,31 @@ p {
   }
 }
 
-@media screen and (min-width: 75rem) {
-  /* global styles*/
-  p {
-    font-size: 1.14rem;
-  }
-
-  /* variables */
-  :root {
-    --Main-title: 600 2.7rem 'Bai Jamjuree', sans-serif;
-    --Title: 600 2.3rem 'Bai Jamjuree', sans-serif;
-  }
-
-  /* reusable classes */
-  .buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .buttons a {
-    padding: 0.9rem 2.2rem;
-  }
-
+@media screen and (min-width: 62rem) {
   /* layout */
   .wrapper {
-    max-width: 75rem;
+    max-width: 62.5rem;
+    overflow: hidden;
     margin: 0 auto;
-  }
-
-  /* styles */
-  #header {
-    padding-top: 8rem;
-    background-image: url('../assets/images/bg-header-desktop.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-
-  #header .header__logo img {
-    width: 7.875rem;
-    margin-bottom: 4.063rem;
-  }
-
-  #header .header__text {
-    width: 42rem;
-  }
-
-  #header .header__text p {
-    margin-bottom: 3.25rem;
   }
 
   #details .wrapper {
     max-width: 45rem;
   }
 
-  #details .details__text {
-    margin-bottom: 5.188rem;
-  }
-
   #details .details__container {
     display: flex;
     align-items: center;
-    gap: 6.5rem;
+    gap: 3rem;
     overflow: hidden;
     text-align: left;
     max-width: 78rem;
+    margin: 0;
+  }
+
+  #details .details__image {
+    display: flex;
+    flex-basis: 60%;
   }
 
   #details .details__image img {
@@ -526,14 +446,10 @@ p {
     padding-bottom: 10.375rem;
   }
 
-  #workflow .workflow__text {
-    margin-bottom: 5rem;
-  }
-
   #workflow .workflow__cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2.438rem;
+    gap: 2rem;
   }
 
   #workflow .workflow__cards img {
@@ -545,9 +461,34 @@ p {
   }
 
   #brands-logos .brands-logos__container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+    gap: 3.2rem;
+  }
+
+  #brands-logos img {
+    width: 9rem;
+  }
+
+  #footer .footer__help ul {
+    column-gap: 5.75rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  /* layout */
+  .wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+  #details .details__container {
+    gap: 6.5rem;
+  }
+
+  #workflow .workflow__cards {
+    gap: 2.438rem;
+  }
+
+  #brands-logos .brands-logos__container {
     gap: 6rem;
   }
 
@@ -555,63 +496,7 @@ p {
     width: 10rem;
   }
 
-  #clipboard {
-    padding-bottom: 9.313rem;
-  }
-
-  #clipboard .clipboard__text {
-    margin-bottom: 3.313rem;
-  }
-
-  #clipboard .clipboard__text p {
-    width: 41rem;
-    margin: 0 auto;
-  }
-
   #footer {
     padding: 2.375rem 10rem;
-    text-align: left;
-  }
-
-  #footer .footer__logo img {
-    margin: 0;
-    width: 3.5rem;
-  }
-
-  #footer .footer__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #footer .footer__help {
-    margin: 0;
-  }
-
-  #footer .footer__help ul {
-    display: grid;
-    grid-template-columns: [start] 1fr [middle-1] 1fr [middle-2] 1fr [end];
-    row-gap: 1rem;
-    column-gap: 5.75rem;
-  }
-
-  #footer .footer__help ul li:nth-child(3) {
-    grid-area: 1 / middle-1 / middle-2;
-  }
-
-  #footer .footer__help ul li:last-child {
-    grid-area: 1 / middle-2 / end;
-  }
-
-  #footer .footer__help ul li a {
-    font-size: 1.1rem;
-  }
-
-  #footer .footer__socials {
-    gap: 1.36rem;
-  }
-
-  #footer .footer__socials a i {
-    font-size: 1.563rem;
   }
 }

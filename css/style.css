@@ -468,6 +468,10 @@ p {
     width: 9rem;
   }
 
+  #footer {
+    padding: 2.375rem 6.3rem;
+  }
+
   #footer .footer__help ul {
     column-gap: 5.75rem;
   }

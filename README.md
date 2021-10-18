@@ -32,8 +32,8 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/mobile-first-clipboard-landing-page-flexbox-and-css-grid-mMu0WAIeW)
+- Demo URL: [Demo](https://leonardoyz.github.io/clipboard-landing-page/)
 
 #
 
@@ -61,4 +61,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [LeonardoYz](https://www.frontendmentor.io/profile/GodlyCodex)
+- Frontend Mentor - [LeonardoYz](https://www.frontendmentor.io/profile/LeonardoYz)
